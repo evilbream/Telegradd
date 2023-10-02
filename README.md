@@ -22,6 +22,7 @@ Adder for Telegram with Proxy Support
 
 ## Parser options:
 - Scrape users from comments in the channel
+- Scrape users from the group
 - Scrape users from messages in the group
 - Filters:
 - You can choose more than one options (one option from square brackets)
