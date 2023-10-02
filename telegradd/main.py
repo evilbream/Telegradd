@@ -1,4 +1,6 @@
 import asyncio
+import os
+import pathlib
 # основной файл с мен и ссылкой везде
 import random
 
@@ -6,6 +8,14 @@ from telegradd.adder.main_adder import main_adder, join_group
 from telegradd.connect.authorisation.main_auth import add_account, view_account, delete_banned, auth_for_test, \
     update_credentials, delete_duplicates_csv, delete_accounts
 from telegradd.parser.main_parser import parser_page
+
+def create_dirs():
+    if not os.path.exists(pathlib.Path(pathlib.Path(__file__).parents[1], 'sessions')):
+        os.makedirs(pathlib.Path(pathlib.Path(__file__).parents[1], 'sessions', 'pyrogram_sessions'))
+        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'sessions_json'))
+        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'TData'))
+        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'telethon_sessions'))
+
 
 banners = [
     """
@@ -41,6 +51,7 @@ update_option = "  UPDATE OPTIONS:\n" \
                 " (7) Update Phone\n"
 
 def home_page():
+    create_dirs()
     page_text = "\n\n" \
                 f"{random.choice (banners)}\n" \
                 " LOGIN OPTIONS:\n" \
