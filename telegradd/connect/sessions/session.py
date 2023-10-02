@@ -12,7 +12,6 @@ import json
 import shutil
 import logging
 from telegradd.connect.sessions.tdata_support import convert_tdata
-logging.basicConfig(level=logging.INFO)
 
 @dataclass
 class TGdata:

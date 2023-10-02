@@ -54,9 +54,4 @@ class Session(ABC):
 
 
 
-#FULL_PATH = dirs[:dirs.index ('telegradd')]
-#base_path = ('\\').join([*FULL_PATH, 'telegradd', 'connect', 'sessions', 'session_store', 'djdk.sessions'])
-#sqlite3.connect(base_path)
-#sqlite3.connect('C:\\Users\\Atrocity\\Desktop\\Telegradd\\telegradd\\connect\\sessions\\session_store\\334444444.sessions')
-#print(dirs[:dirs.index ('telegradd')])
 

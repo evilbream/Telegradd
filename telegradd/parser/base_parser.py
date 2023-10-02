@@ -1,7 +1,6 @@
 import collections
 import re
-from abc import ABC, abstractmethod
-from dataclasses import dataclass
+from abc import ABC
 from telethon import TelegramClient
 from typing import Union, Any
 from telethon.tl import types
