@@ -50,7 +50,8 @@ Adder for Telegram with Proxy Support
 - Download repository
 - Install requirements
 - Run main.py in telegradd folder
-- Add sessions to one of the folders (pyrogram, telethon, tdata, json) in the sessions folder or log in using your phone number and app id, app hash
+- Add sessions to one of the folders (pyrogram, telethon, tdata, json) in the sessions folder or log in using your phone number and app id, app hash (option 1 in main.py)
+- Choose in main.py how to load sessions (options 2 - 5)
 - Now you can do whatever you want
 
 ## Proxy usage:
