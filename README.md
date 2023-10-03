@@ -53,7 +53,7 @@ Adder for Telegram with Proxy Support
 * copy "api_id" n "api_hash" after clicking create app
 * **! Skip this step if u use authorization by __session__ files**
 
-# Installation on Windows
+# Installation
 - Install python at least version 3.10 [how to install](https://www.digitalocean.com/community/tutorials/install-python-windows-10)
 - Download the archive directly and unzip it or u can install git and download archive using git clone [install git](https://github.com/git-guides/install-git) (https://github.com/git-guides/install-git)
 
