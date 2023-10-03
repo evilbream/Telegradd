@@ -397,6 +397,8 @@ class Auth:
     def session_without_proxy(self):
         password = input (f'Enter password: ')
         for file in os.listdir(self.path):
+            if str(file).startswith('info.txt'):
+                continue
             if (not str(file).endswith('.session')) and (self.log_in != self.TDATA):
                 continue
             file = str(file).rstrip('.session')
