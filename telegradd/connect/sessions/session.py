@@ -68,7 +68,7 @@ class Pyrogram_session(Session):
 
     @property
     def pyrogram_session(self):
-        self._pyrogram_session_name = ('\\').join((*self.FULL_PATH, 'sessions', 'pyrogram_sessions', f'{self._pyrogram_name}{self.EXTENSION}'))#'C:\\Users\\Atrocity\\Desktop\\Telegradd\\sessions\\pyrogram_sessions\\my_account.sessions'
+        self._pyrogram_session_name = ('\\').join((self.FULL_PATH, 'sessions', 'pyrogram_sessions', f'{self._pyrogram_name}{self.EXTENSION}'))#'C:\\Users\\Atrocity\\Desktop\\Telegradd\\sessions\\pyrogram_sessions\\my_account.sessions'
         return self._pyrogram_session_name
 
     def _create_table(self, tables: List):  # pass list of tables as arg to create  tables
@@ -155,7 +155,7 @@ class Telethon_session(Session): # moved sessions to session store
         super().__init__()
 
     def to_telethon_session(self):
-        telethon_session = ('\\').join((*self.FULL_PATH, 'sessions', 'telethon_sessions', f'{self._telethon_name}{self.EXTENSION}'))
+        telethon_session = ('\\').join((self.FULL_PATH, 'sessions', 'telethon_sessions', f'{self._telethon_name}{self.EXTENSION}'))
         self.set_telethon_session(self._telethon_name)
         shutil.move(telethon_session, self.telethon_session)
 
@@ -167,12 +167,12 @@ class Json_sessions(Session):
         super().__init__()
 
     def to_telethon_session(self):
-        session = ('\\').join ((*self.FULL_PATH, 'sessions', 'sessions_json', f'{self.session_name}{self.EXTENSION}'))
+        session = ('\\').join ((self.FULL_PATH, 'sessions', 'sessions_json', f'{self.session_name}{self.EXTENSION}'))
         self.set_telethon_session (self.session_name)
         shutil.move (session, self.telethon_session)
 
     def js_dict(self) -> dict:
-        js_file = ('\\').join ((*self.FULL_PATH, 'sessions', 'sessions_json', f'{self.session_name}{self.JS_EXTENSION}'))
+        js_file = ('\\').join ((self.FULL_PATH, 'sessions', 'sessions_json', f'{self.session_name}{self.JS_EXTENSION}'))
         with open (js_file) as f:
             line = json.loads(f.readlines ()[0].rstrip ('\n'))
         return line
@@ -258,17 +258,5 @@ class UNITED_SESSION:
             return sess.done_session
 
 
-
-
-"""BASE_DIR = pathlib.Path (__file__).parents[3].joinpath('sessions', 'TData', '628983752848', 'tdata')
-pas = [pas for pas in os.listdir(BASE_DIR.parent) if str(pas).endswith('.txt')]
-with open(BASE_DIR.parent.joinpath(str(pas[0])), 'r') as f:
-    line = f.read()
-
-print(line)"""
-
-
-
-#4294967295
 
 

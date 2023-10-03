@@ -10,8 +10,8 @@ dirs = str(dir_path).split('\\')
 @dataclass
 class Session(ABC):
     EXTENSION = '.session'
-    FULL_PATH = dirs[:dirs.index ('telegradd')]
-    _telethon_base_path = '\\'.join ([*FULL_PATH, 'telegradd', 'connect', 'sessions', 'session_store'])
+    FULL_PATH = str(pathlib.Path(__file__).parents[3])
+    _telethon_base_path = '\\'.join ([FULL_PATH, 'telegradd', 'connect', 'sessions', 'session_store'])
     _telethon_session = None
     _conn = None
 
@@ -51,7 +51,5 @@ class Session(ABC):
 
     def clear_path(self):
         pass
-
-
 
 
