@@ -9,13 +9,6 @@ from telegradd.connect.authorisation.main_auth import add_account, view_account,
     update_credentials, delete_duplicates_csv, delete_accounts
 from telegradd.parser.main_parser import parser_page
 
-def create_dirs():
-    if not os.path.exists(pathlib.Path(pathlib.Path(__file__).parents[1], 'sessions')):
-        os.makedirs(pathlib.Path(pathlib.Path(__file__).parents[1], 'sessions', 'pyrogram_sessions'))
-        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'sessions_json'))
-        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'TData'))
-        os.makedirs (pathlib.Path (pathlib.Path (__file__).parents[1], 'sessions', 'telethon_sessions'))
-
 
 banners = [
     """
@@ -51,7 +44,6 @@ update_option = "  UPDATE OPTIONS:\n" \
                 " (7) Update Phone\n"
 
 def home_page():
-    create_dirs()
     page_text = "\n\n" \
                 f"{random.choice (banners)}\n" \
                 " LOGIN OPTIONS:\n" \
@@ -88,25 +80,18 @@ def home_page():
         home_page()
     if 1 <= option <= 5:
         add_account(option)
-        home_page ()
     elif 6 <= option <= 8:
         parser_page(option)
-        home_page ()
     elif option == 9:
         asyncio.run(main_adder(how_to_add='id'))
-        home_page()
     elif option == 10:
         asyncio.run(main_adder())
-        home_page()
     elif option == 11:
         print('in progress')
-        home_page()
     elif option == 12:
         delete_banned()
-        home_page()
     elif option == 13:
         view_account()
-        home_page()
     elif option == 14:
         asyncio.run(join_group())
     elif option == 15:
@@ -124,15 +109,12 @@ def home_page():
         pass
     elif option == 16:
         asyncio.run(auth_for_test())
-        home_page()
     elif option == 17:
         delete_duplicates_csv()
-        home_page()
     elif option == 18:
         delete_accounts()
         delete_banned()
         print('All deleted accounts now stored in banned')
-        home_page()
     elif option == 0:
         print ("Exiting ...")
         exit (0)
