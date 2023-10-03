@@ -1,7 +1,6 @@
 import asyncio
 import os
 import pathlib
-# основной файл с мен и ссылкой везде
 import random
 
 from telegradd.adder.main_adder import main_adder, join_group
