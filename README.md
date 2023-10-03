@@ -96,6 +96,9 @@ I am not responsible for the work of the public proxies above, at the time of th
 - MTP:host_name:port:proxy_secret (for MTProto Proxies)
   - 'MTP:mtproxy.network:8880:secret' 
   - if the proxy has no secret enter 0 instead of a secret
+
+## 2-fa
+When loading sessions, you will be asked for a password, this is the password for 2-fa, if there is none, press enter
  
 ### Warning
 Do not use with newly registered accounts
