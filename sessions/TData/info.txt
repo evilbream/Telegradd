@@ -1,0 +1,2 @@
+add tdata in folder with phone number in this folder before launching
+path should look like this 128839393/tdata
