@@ -96,6 +96,9 @@ I am not responsible for the work of the public proxies above, at the time of th
 - MTP:host_name:port:proxy_secret (for MTProto Proxies)
   - 'MTP:mtproxy.network:8880:secret' 
   - if the proxy has no secret enter 0 instead of a secret
+ 
+### Warning
+Do not use with newly registered accounts
 
 ## Contacts
 You can text to me for any questions
