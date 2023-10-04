@@ -96,6 +96,9 @@ I am not responsible for the work of the public proxies above, at the time of th
 - MTP:host_name:port:proxy_secret (for MTProto Proxies)
   - 'MTP:mtproxy.network:8880:secret' 
   - if the proxy has no secret enter 0 instead of a secret
+ 
+## json file example 
+{"session_file":"123456789","phone":"123456789","register_time":1652446478,"app_id":1234,"app_hash":"b18441a1gg607e10a989891a5462e627","sdk":"4.3 Jelly Bean MR2 (18)","app_version":"4.8.1","device":"Windows","lang_pack":"an","system_lang_pack":"an","proxy":"[2, \"127.0.0.1\", 9158, true, null, null]","first_name":"Lindy","last_name":"f teee","username":"","ipv6":false,"twoFA":""}
 
 ## 2-fa
 When loading sessions, you will be asked for a password, this is the password for 2-fa, if there is none, press enter
