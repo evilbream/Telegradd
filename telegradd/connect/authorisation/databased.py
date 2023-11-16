@@ -128,13 +128,16 @@ class Database:
             if data[8] == 'False':
                 continue
             else:
-                res = data[8].split (':')
-                pass_3_days = datetime.datetime (int (res[1]), int (res[2].lstrip ('0')), int (res[3].lstrip ('0')),
-                                                 int (res[4].lstrip ('0')) if int(res[4]) != 00 else int(res[4])) \
-                              + relativedelta (days=3) < datetime.datetime.now ()
-                if pass_3_days:
+                try:
+                    res = data[8].split (':')
+                    pass_3_days = datetime.datetime (int (res[1]), int (res[2].lstrip ('0')), int (res[3].lstrip ('0')),
+                                                     int (res[4].lstrip ('0')) if int(res[4]) != 00 else int(res[4])) \
+                                  + relativedelta (days=3) < datetime.datetime.now ()
+                    if pass_3_days:
+                        self.update_restriction ('False', num=data[0])
+                        print(f'Restriction updated for {data[1]}')
+                except IndexError:
                     self.update_restriction ('False', num=data[0])
-                    print(f'Restriction updated for {data[1]}')
 
     def update_system(self, system, num=None, name=None):
         if name is not None:
