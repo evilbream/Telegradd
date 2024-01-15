@@ -101,6 +101,9 @@ class ADDER:
                 except errors.UserBlockedError:
                     handle_db_errors(me.phone, me.username, 'User blocked')
                     break
+                except errors.FloodWaitError:
+                    print(f'Flood error, pls wait one more day on this account - {me.username}')
+                    break
                 except Exception as err:
                     print(f'Unhandled error pls send it to me - tg @malevolentkid {err}')
                     continue
@@ -145,6 +148,9 @@ class ADDER:
                     break
                 except errors.UserBlockedError:
                     handle_db_errors(me.phone, me.username, 'User blocked')
+                    break
+                except errors.FloodWaitError:
+                    print(f'Flood error, pls wait one more day on this account - {me.username}')
                     break
                 except Exception as err:
                     print(f'Unhandled error pls send it to me - tg @malevolentkid {err}')
