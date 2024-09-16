@@ -106,7 +106,3 @@ When loading sessions, you will be asked for a password, this is the password fo
 ### Warning
 Do not use with newly registered accounts
 
-## Contacts
-You can text to me for any questions
-* Telegram - [malevolentkid](https://t.me//malevolentkid)
-
